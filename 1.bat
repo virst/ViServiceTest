@@ -1,0 +1,1 @@
+sc.exe create ".NET Vi Service Test" binpath="C:\tmp\vst\ViServiceTest.exe"

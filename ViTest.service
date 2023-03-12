@@ -1,0 +1,16 @@
+﻿[Unit]
+Description=ViServiceTest
+
+[Service]
+Environment="TMP_PATH=/var/tmp/"
+Environment=LANG=ru_RU.UTF-8
+WorkingDirectory=/var/ViService/
+ExecStart=/usr/bin/dotnet /var/ViService/ViServiceTest.dll
+Restart=always
+# Restart service after 10 seconds if the dotnet service crashes:
+RestartSec=60
+KillSignal=SIGINT
+User=root
+
+[Install]
+WantedBy=multi-user.target
